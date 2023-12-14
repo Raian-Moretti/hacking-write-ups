@@ -88,8 +88,6 @@ feroxbuster -u [http://oopsie.htb](http://oopsie.htb/) -r
 
 ![Untitled](Images/Untitled%203.png)
 
-**NOTE**: DO NOT USE THIS KINDA OF TOOL IN THE REAL WORLD. YOU WILL GET CAUGHT BY WAF!!
-
 **Answer:** `cdn-cgi/login`
 
 - [ ]  TASK 3 - **What can be modified in Firefox to get access to the upload page?**
