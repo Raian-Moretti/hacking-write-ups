@@ -5,21 +5,20 @@
 Very Easy
 
 ### Tags:
-
-- PHP
-- Web
-- Custom Applications
-- Session Handling
-- Apache
-- Reconnaissance
-- Web Site Structure Discovery
-- Cookie Manipulation
-- SUID Exploitation
-- Authentication bypass
-- Clear Text Credentials
-- Arbitrary File Upload
-- Insecure Direct Object Reference (IDOR)
-- Path Hijacking
+PHP,
+Web,
+Custom Applications,
+Session Handling,
+Apache,
+Reconnaissance,
+Web Site Structure Discovery,
+Cookie Manipulation,
+SUID Exploitation,
+Authentication bypass,
+Clear Text Credentials,
+Arbitrary File Upload,
+Insecure Direct Object Reference (IDOR),
+Path Hijacking.
 
 ### Tools used:
 
