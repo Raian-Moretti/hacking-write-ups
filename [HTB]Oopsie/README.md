@@ -73,7 +73,7 @@ ffuf -w /usr/share/wordlists/seclists/Discovery/Web-Content/raft-medium-director
 I will need to continue digging through the directories, like this:
 
 ```bash
-ffuf -w /usr/share/wordlists/seclists/Discovery/Web-Content/raft-medium-directories-lowercase.txt  -e .php -u http://oopsie.htb**/cdn-cgi**/FUZZ -c -t 150
+ffuf -w /usr/share/wordlists/seclists/Discovery/Web-Content/raft-medium-directories-lowercase.txt  -e .php -u http://oopsie.htb/cdn-cgi/FUZZ -c -t 150
 ```
 
 I won't show the output, but I believe you already got it.
@@ -83,7 +83,7 @@ I won't show the output, but I believe you already got it.
 feroxbuster (it does find recursive directories - yeey)
 
 ```bash
-feroxbuster -u [http://oopsie.htb](http://oopsie.htb/) -r
+feroxbuster -u http://oopsie.htb -r
 ```
 
 ![Untitled](Images/Untitled%203.png)
