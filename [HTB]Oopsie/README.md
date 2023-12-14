@@ -142,7 +142,7 @@ We already know that the file appears in `uploads/` directory because we saw it 
 
 So, this task is asking us to find a file shared with robert user. This means that we need to have access to his profile. For researchs purpose, I scanned every ID in accounts page and found some users, none was robert. I conclude that a robert user doesn’t exist in this site, and even if it existed where could I find a shared file or something?. Also, it was a php site with upload page it’s ********************************obviously******************************** a reverse shell as we suspected.
 
- I gonna use this revshell: [https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php](https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php)
+ I gonna use this revshell: [pentestmonkey/php-reverse-shell](https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php)
 
 ********Note********: If it doesn’t accept .php format file there are plenty of formats you could try, like .php5 or something.
 
