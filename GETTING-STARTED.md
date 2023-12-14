@@ -37,7 +37,7 @@ Take advantage of online platforms that host CTF challenges. Some popular ones i
 
 Connect with other CTF enthusiasts, share your experiences, and learn from others. Platforms like Discord and IRC often have active CTF communities.
 
-Remember, CTFs are about learning and having fun. Don't be afraid to tackle challenges, ask questions, and embrace the learning process. Happy hacking! 🚀🔒
+Remember, CTFs are about learning and having fun. Don't be afraid to tackle challenges, ask questions, and embrace the learning process.
 
 ## Contributing
 
