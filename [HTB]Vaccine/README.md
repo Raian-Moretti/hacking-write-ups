@@ -82,7 +82,7 @@ Let's make a note of this information and continue our investigation. Initially,
 
 ![Untitled](Images/Untitled%208.png)
 
-Confirmed, it is MD5. To crack the hash, we have various methods at our disposal. For academic purposes, I'll introduce a new one, but feel free to use `john` or any other tool you're familiar with. In this instance, we'll use CrackStation [https://crackstation.net/](https://crackstation.net/), which is straightforward to use, so I won't provide a detailed demonstration here. After successfully retrieving the password, we can proceed to log in to the website. This aligns with our earlier observation of an HTTP service in the initial task; now is the opportune moment to utilize it.
+Confirmed, it is MD5. To crack the hash, we have various methods at our disposal. For academic purposes, I'll introduce a new one, but feel free to use `john` or any other tool you're familiar with. In this instance, we'll use [CrackStation](https://crackstation.net/), which is straightforward to use, so I won't provide a detailed demonstration here. After successfully retrieving the password, we can proceed to log in to the website. This aligns with our earlier observation of an HTTP service in the initial task; now is the opportune moment to utilize it.
 
 ![Untitled](Images/Untitled%209.png)
 
@@ -100,7 +100,7 @@ As there isn't much to do on this page, I began experimenting by entering variou
 
 I conducted a test using a simple payload: `vaccine.htb/dashboard.php?search='`. Confirming my suspicions, the system exhibited vulnerability to SQLi, as it returned a database error.
 
-**Note**: If you want to know how to interact with the IP lab using `<lab_name>.htb` to simplify your tasks. Take a look at [my first write-up] (https://github.com/Raian-Moretti/write-ups/blob/main/[HTB]Oopsie/README.md#pro-tip).
+**Note**: If you want to know how to interact with the IP lab using `<lab_name>.htb` to simplify your tasks. Take a look at [my first write-up](https://github.com/Raian-Moretti/write-ups/blob/main/[HTB]Oopsie/README.md#pro-tip).
 
 ![Untitled](Images/Untitled%2012.png)
 
